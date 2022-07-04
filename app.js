@@ -42,12 +42,12 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Routes
 // Create route for search
-app.get('/localhost:3000', (req, res) => {
-  res.send('This is the Search Page')
+app.get('/', (req, res) => {
+  res.render('search')
 })
 // Create route for results
-app.get('/localhost:3000/results', (req, res) => {
-  res.send('This is the Results Page')
+app.get('/results', (req, res) => {
+  res.render('results')
 })
 
 // Catch 404 and forward to error handler
